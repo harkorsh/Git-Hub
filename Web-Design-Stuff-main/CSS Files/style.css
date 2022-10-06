@@ -1,0 +1,41 @@
+body{background-color: rgb(212, 212, 185, 0.5);}
+P{font-size: 120%;color: rgb(65, 47, 82); font-family:"PassionsConflict";}
+h1{font-size: 190%;color: rgb(117, 114, 120); font-family: "Pacifico";}
+p.important{border-style: solid; display: inline-block;border-width: 5px; border-color: bisque; font-family: Shadows;}
+.center{display: block; margin: auto;}
+.centertext{text-align: center;}
+figure{
+    float: left;
+    text-align: center;
+    font-style: smaller;
+    text-indent: 0;
+    border: thin silver solid;
+    padding-top: 100;
+}
+figcaption {caption-side: bottom;}
+
+@font-face {
+    font-family: PassionsConflict ;
+    src: url(../Fonts/PassionsConflict-Regular.ttf);
+}
+
+@font-face {
+    font-family: Pacifico ;
+    src: url(../Fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: Shadows ;
+    src: url(../Fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+.button1 {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.315);
+    border: 2px solid #ebf4ec;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
