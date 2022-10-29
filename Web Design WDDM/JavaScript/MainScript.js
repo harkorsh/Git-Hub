@@ -22,3 +22,8 @@ const myCar = new Car("Honda", "Civic", "2023", "Red");
 // myCar.changeColor('White'); // Change color
 // myCar.changeMake('Honda'); // Change Make
 console.log("MY CAR\nMAKE: " + myCar.make + "\nMODEL: " + myCar.model + "\nYEAR: " + myCar.year + "\nCOLOR: " + myCar.color);
+
+// Read JSON data
+fetch('./JavaScript/data.json')
+  .then(response => response.json())
+  .then(data => console.log("MY DATA\nFIRSTNAME: " + data.firstName + "\nLASTNAME: " + data.lastName + "\nGENDER: " + data.gender + "\nAGE: " + data.age))

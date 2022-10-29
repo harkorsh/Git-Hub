@@ -1,0 +1,12 @@
+{
+  "firstName": "David",
+  "lastName": "Akoshile",
+  "gender": "man",
+  "age": 28,
+  "address": {
+      "streetAddress": "705",
+      "city": "Waterloo",
+      "state": "ON",
+      "postalCode": "N2T2V4"
+  }
+}
