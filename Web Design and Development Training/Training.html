@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth/1, window.innerHeight/1 );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.CapsuleGeometry( 1, 2, 4, 6 );
+            const material = new THREE.LineDashedMaterial( { color: 0xA1F0F0, linewidth: 1, scale: 1, dashSize: 3, gapSize: 1, } );
+			// const material = new THREE.MeshBasicMaterial( { color: 0xA1F0F0 } );
+			const capsule = new THREE.Mesh( geometry, material );
+			scene.add( capsule );
+
+			camera.position.z = 3;
+
+			function animate() {
+				requestAnimationFrame( animate );
+
+				capsule.rotation.x += 0.01;
+				capsule.rotation.y += 0.03;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
+        
+        <script>
+            const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+            
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+            
+            const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
+            camera.position.set( 0, 0, 100 );
+            camera.lookAt( 0, 0, 0 );
+
+            const scene = new THREE.Scene(); 
+
+            //create a blue LineBasicMaterial
+            const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+
+            const points = [];
+            points.push( new THREE.Vector3( - 10, 0, 0 ) );
+            points.push( new THREE.Vector3( 0, 10, 0 ) );
+            points.push( new THREE.Vector3( 10, 0, 0 ) );
+            
+            const geometry = new THREE.BufferGeometry().setFromPoints( points );
+
+            const line = new THREE.Line( geometry, material );
+
+            scene.add( line );
+
+
+            
+			camera.position.z = 3;
+
+			function animate() {
+				requestAnimationFrame( animate );
+
+				capsule.rotation.x += 0.01;
+				capsule.rotation.y += 0.03;
+
+				renderer.render( scene, camera );
+			};
+
+			animate()
+
+        </script>
+	</body>
+</html>

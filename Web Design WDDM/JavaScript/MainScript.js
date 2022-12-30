@@ -26,4 +26,4 @@ console.log("MY CAR\nMAKE: " + myCar.make + "\nMODEL: " + myCar.model + "\nYEAR:
 // Read JSON data
 fetch('./JavaScript/data.json')
   .then(response => response.json())
-  .then(data => console.log("MY DATA\nFIRSTNAME: " + data.firstName + "\nLASTNAME: " + data.lastName + "\nGENDER: " + data.gender + "\nAGE: " + data.age + "\nAGE: " + data.age + "\nSTREET ADDRESS: " + data.address.streetAddress + "\nCITY: " + data.address.city + "\nSTATE: " + data.address.state + "\nPOSTAL CODE: " + data.address.postalCode ))
+  .then(data => console.log("MY DATA\nFIRSTNAME: " + data.firstName + "\nLASTNAME: " + data.lastName + "\nGENDER: " + data.gender + "\nAGE: " + data.age + "\nSTREET ADDRESS: " + data.address.streetAddress + "\nCITY: " + data.address.city + "\nSTATE: " + data.address.state + "\nPOSTAL CODE: " + data.address.postalCode ))

@@ -1,0 +1,40 @@
+body {
+  background: yellowgreen;
+}
+.banner {
+  background: blue;
+  border-radius: 20px;
+}
+h1 {
+  color: aliceblue;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 576px) {
+  body {
+    background: red;
+  }
+  .banner {
+    background: yellowgreen;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: greenyellow;
+  }
+  .banner {
+    background: blue;
+  }
+  h1 {
+    color: red;
+    font-size: 60px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
