@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* 
+using ::before ::after pseudo-elements in a project, also using z-index, rounded corners, transition, transform and
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background: url(./images/Background.jpg);
+  background-size: cover;
+}
+
+
+nav {
+  color: aliceblue;
+  text-align: center;
+}
+
+header {
+  width: auto;
+  text-align: center;
+  color: aliceblue;
+  font-size: 40px;
+}
+
+.divhov {
+  width: 350px;
+  height: 450px;
+  margin: 100px auto;
+  position: relative;
+}
+#divimg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
+}
+.divhov::before {
+  content: "";
+  border: 2px solid grey;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -2;
+  transition: all 1.2s linear;
+  border-radius: 20px;
+}
+.divhov::after {
+  content: "";
+  background: rgba(128, 128, 128, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.8s ease-in-out;
+  border-radius: 20px;
+}
+.divhov:hover::after,
+.divhov:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.pclass {
+  color: aliceblue;
+  background: rgba(18, 46, 75, 0.69);
+  font-size: 20px;
+  border: 2px solid rgba(68, 68, 172, 0.803);
+  width: 80%;
+  margin-left: 10%;
+  max-width: 1020px;
+}
+
+#spanid {
+  text-align: center;
+  color: aqua;
+  display: block;
+  font-size: 50px;
+  animation: animate 5s infinite;
+}
+
+/* #spanid:hover {
+  text-align: center;
+  color: rgb(34, 168, 213);
+  display: block;
+  font-size: 50px;
+  transform: scale(1.4, 1.4);
+  transform: rotateZ(5deg);
+} */
+
+a {
+  font-size: 40px;
+}
+a:hover {
+  font-size: 40px;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1.4, 1.4);
+  }
+  25% {
+    transform: rotateZ(5deg);
+    color: blue;
+  }
+  50% {
+    transform: scale(1.4, 1.4);
+    background: brown;
+  }
+  75% {
+    transform: translateX(-30px);
+    color: aquamarine;
+  }
+  100% {
+    transform: scale(1.4, 1.4);
+  }
+}
